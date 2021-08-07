@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <title>Let be Prayer</title>
+</head>
+<body>
+    <div class="app">
+        <div class="video-container">
+            <video loop>
+                <source src="./video/rain.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <div class="main-wrapper">
+            <section class="time">
+                <button data-time="300">5 minutes</button>
+                <button data-time="600">10 minutes</button>
+                <button data-time="900">15 minutes</button>
+            </section>
+
+            <section class="player">
+                <audio class="track" loop>
+                    <source src="./audio/rain.mp3">
+                </audio>
+
+                <img class="play-btn" src="./img/play.svg" alt="Play button">
+
+                <svg class="track-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="226.5" cy="226.5" r="216.5" stroke="white" stroke-width="20"/>
+                </svg>
+
+                <svg class="moving-outline" width="453" height="453" viewBox="0 0 453 453" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="226.5" cy="226.5" r="216.5" stroke="#018EBA" stroke-width="20"/>
+                </svg>
+
+                <h3 class="time-display">0:00</h3>
+
+
+            </section>
+
+            <section class="settings">
+                <div class="sound-picker">
+                    <button data-sound="./audio/rain.mp3" data-video="./video/rain.mp4"><img src="./img/rain.svg" alt="Rain Icon"></button>
+                    <button data-sound="./audio/beach.mp3" data-video="./video/beach.mp4"><img src="./img/beach.svg" alt="Sun Icon"></button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="./js/main.js" type="module"></script>
+</body>
+</html>

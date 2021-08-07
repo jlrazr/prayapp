@@ -1,0 +1,113 @@
+body {
+    color: #FFF;
+}
+
+.app {
+    .video-container {
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        height: 100vh;
+        z-index: -1;
+
+        &::after {
+            content: "";
+            background: rgba(2, 9, 29, 0.7);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100vw;
+            height: 100vh;
+            z-index: 0;
+            pointer-events: none;
+        }
+    }
+
+    .main-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        align-items: center;
+        justify-content: space-evenly;
+
+        .time, .player, .settings {
+            background: transparent;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            flex: 1;
+            width: 90%;
+        }
+
+        .time, .settings {
+            button {
+                font-size: 1rem;
+                font-weight: bold;
+                color: white;
+                width: 30%;
+                height: min-content;
+                background: none;
+                border: 2px solid #FFF;
+                border-radius: 45px;
+                padding: 10px 15px;
+                cursor: pointer;
+                transition: all 0.5s ease;
+            }
+        }
+
+        .time {
+            flex-direction: row;
+            justify-content: space-between;
+            max-height: 145px;
+        }
+
+        .player {
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            svg {
+                position: absolute;
+                pointer-events: none;
+                height: 65%;
+                width: 65%;
+                top: 10%;
+            }
+
+            .play-btn {
+                position: absolute;
+                top: 25%;
+                margin-left: 15px;
+            }
+
+            .time-display {
+                font-size: 3rem;
+                position: absolute;
+                bottom: 0px;
+            }
+        }
+
+        .settings {
+            .sound-picker {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+
+                button {
+                    border: none;
+                    width: 45%;
+
+                    img {
+                        width: 75%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
