@@ -23,8 +23,6 @@ function app () {
 
             track.setAttribute("src", newTrack);
             video.setAttribute("src", newVideo);
-            console.log(track);
-            console.log(video);
 
             playMedia(track, video);
         });
